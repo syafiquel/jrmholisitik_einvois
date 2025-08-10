@@ -1,0 +1,119 @@
+@page { margin: 0 }
+body {
+  margin: 0;
+  font-family: Helvetica;
+  background-color: black
+}
+.sheet {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+}
+
+/** Paper sizes **/
+body.A3           .sheet { width: 297mm; height: 419mm }
+body.A3.landscape .sheet { width: 420mm; height: 296mm }
+body.A4           .sheet { width: 210mm; height: 296mm }
+body.A4.landscape .sheet { width: 297mm; height: 209mm }
+body.A5           .sheet { width: 148mm; height: 209mm }
+body.A5.landscape .sheet { width: 210mm; height: 147mm }
+body.Thermal      .sheet { width: auto; height: auto }
+
+/** Padding area **/
+.sheet.padding-10mm { padding: 10mm }
+.sheet.padding-15mm { padding: 15mm }
+.sheet.padding-20mm { padding: 20mm }
+.sheet.padding-25mm { padding: 25mm }
+
+/** For screen preview **/
+@media screen {
+  body { background: #e0e0e0 }
+  .sheet {
+    background: white;
+    box-shadow: 0 .5mm 2mm rgba(0,0,0,.3);
+    margin: 0;
+    padding: 3mm;
+  }
+}
+
+/** Fix for Chrome issue #273306 **/
+@media print {
+           body.A3.landscape { width: 420mm }
+  body.A3, body.A4.landscape { width: 297mm }
+  body.A4, body.A5.landscape { width: 210mm }
+  body.A5                    { width: 148mm }
+  body.Thermal      .sheet { width: 100mm; height: auto }
+  .sheet {
+    padding: 3mm;
+  }
+  body {
+    zoom: 1; /* Adjust zoom level to fit content */
+    margin: auto; /* Center the content */
+    display: block;
+    background: white; /* Optional: Set background color */
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in width/height calculations */
+  }
+}
+  @page {
+    size: A4
+  }
+
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  .dlm {
+    border: 1px #464646;
+    border-style: solid;
+    padding: 5px;
+  }
+
+  .heady {
+    width:100%;
+  }
+
+  .head2 {
+    font-size:14px;
+  }
+
+  .text {
+    text-align:center;
+  }
+
+  .info {
+    font-size: 10px;
+    font-style: italic;
+    margin-top: 10px;
+    color: #585656;
+  }
+
+  .data {
+    padding: 5px;
+  }
+
+
+
+  .buton {
+    border-radius: 50px;
+    font-size: 0.8rem;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .nama-pills{
+    border: 1px solid #e6b0b0;
+    padding: 5px 0px;
+    margin: 2px 5px
+  }
+  .padding-5mm{
+    padding: 10mm;
+  }
