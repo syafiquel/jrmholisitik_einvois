@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y     libpng-dev     libjpeg-dev     libf
 
 # Install PHP extensions
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg
-RUN docker-php-ext-install gd mysqli curl openssl
+RUN docker-php-ext-install gd mysqli curl
 
 # Enable Apache rewrite module
 RUN a2enmod rewrite

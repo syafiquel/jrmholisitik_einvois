@@ -4,9 +4,9 @@ $database_connection = new StdClass();
 
 
 $local = False;
-$database_connection->server = 'localhost';
-$database_connection->username = 'jrmholis_user';
-$database_connection->password = 'jrmholis_user';
+$database_connection->server = 'jrmholisitik_einvois-db-1';
+$database_connection->username = 'root';
+$database_connection->password = 'root';
 $database_connection->name = 'jrmholis_agent_circle';
 // $database_connection->server = 'localhost';
 // $database_connection->username = 'root';
