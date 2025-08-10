@@ -7,7 +7,5 @@ __cuba.php
 __find_credit.php
 *.csv
 note.txt
-docker-compose.yml
-Dockerfile
-init.sql
+
 vendor/
